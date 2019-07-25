@@ -3,10 +3,15 @@ Releasing my own set of private tools initially used on the Numerai Dataset up t
 
 ## Dependecies
 Pandas
+
 Numpy
+
 Sci-kit Learn
+
 Matplotlib
+
 Keras
+
 Tensorflow
 
 ## Algorithm List - Brief Description
@@ -22,3 +27,4 @@ Graphs plotted at the end of each generation include the top 5 from the previous
 
 ### Scoring
 The data input for this notebook is designed to accept the broken up dataset using the dataset_split.py script, by era, that I provided in the Numerai_Dataset repository. This notebook also has the tools necessary to combine the broken up dataset produced by dataset_split.py, in this case from any era range specified by the user (if the data is split by its era), and stitch them together for training and validation. This notebook also allows for the testing of a model and its architecture by training and testing the same model with random initialisations multiple times to find the average validation accuracy of the model. This can help to determine if the model's high accuracy from a single run train/valid/test is an anomaly.
+All adjustable variables can be found in main(). build_model function houses the model architecture needed for training. It accepts some variables that can allow for quick tuning from main() if needed.
